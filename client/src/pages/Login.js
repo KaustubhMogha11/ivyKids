@@ -34,10 +34,10 @@ const Login = () => {
     <>
       {/* <h3 >Login</h3> */}
 
-      <form onSubmit={handleSubmit} id="login-form" class="login-page">
+      <form onSubmit={handleSubmit} id="login" class="login-page">
        <div class="form-box">
        <div class="button-box">
-        <div id="btn"></div>
+        <div id="btn" ></div>
         <button type="button" onclick='login()' class="toggle-btn">Log In</button>
         <Link to="/register"> <button type="button" onclick='register()' class="toggle-btn">Register</button></Link>
       </div>

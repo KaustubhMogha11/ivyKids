@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
-
+import "./Login.css"
 const CreateContact = () => {
   const { user } = useContext(AuthContext);
   const { toast } = useContext(ToastContext);
@@ -44,7 +44,9 @@ const CreateContact = () => {
 
   return (
     <>
-      <h2>Create your contact</h2>
+     <div class="form-box2">
+
+      <h3 >Create your contact</h3>
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -113,6 +115,7 @@ const CreateContact = () => {
           className="btn btn-info my-2"
         />
       </form>
+      </div>
     </>
   );
 };

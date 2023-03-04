@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-
+import "./Login.css";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
-
+import "./auth";
 const Register = () => {
   const { toast } = useContext(ToastContext);
   const { registerUser } = useContext(AuthContext);
@@ -44,10 +44,17 @@ const Register = () => {
 
   return (
     <>
-      <h3>Create your account</h3>
+    {/* <div class="form-box"> */}
+      {/* <h3>Create your account</h3> */}
 
-      <form onSubmit={handleSubmit}>
-        <div class="form-group">
+      <form onSubmit={handleSubmit} id="register" class="input-group-register">
+      <div class="form-box2">
+      <div class="button-box">
+        <div id="btn"></div>
+        <Link to="/login"><button type="button" onclick='login()' class="toggle-btn">Log In</button></Link>
+        <Link to="/register"> <button type="button" onclick='register()' class="toggle-btn">Register</button></Link>
+      </div>
+       <div class="form-group">
           <label for="nameInput" class="form-label mt-4">
             Your Name
           </label>
@@ -108,15 +115,17 @@ const Register = () => {
             required
           />
         </div>
-        <input
+        <input 
           type="submit"
           value="Register"
-          className="btn btn-primary my-3"
+          class="submit-btn" 
         />
         <p>
           Already have an account ? <Link to="/login">Login</Link>
         </p>
+      </div> 
       </form>
+      {/* </div> */}
     </>
   );
 };

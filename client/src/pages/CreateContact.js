@@ -58,7 +58,7 @@ const CreateContact = () => {
             name="name"
             value={userDetails.name}
             onChange={handleInputChange}
-            placeholder="John Doe"
+            placeholder="name"
             required
           />
         </div>
@@ -73,7 +73,7 @@ const CreateContact = () => {
             name="address"
             value={userDetails.address}
             onChange={handleInputChange}
-            placeholder="WalkStreet 05, California"
+            placeholder="delhi"
             required
           />
         </div>
@@ -88,7 +88,7 @@ const CreateContact = () => {
             name="email"
             value={userDetails.email}
             onChange={handleInputChange}
-            placeholder="johndoe@example.com"
+            placeholder="xyz@example.com"
             required
           />
         </div>
@@ -103,7 +103,7 @@ const CreateContact = () => {
             name="phone"
             value={userDetails.phone}
             onChange={handleInputChange}
-            placeholder="+977 987654321"
+            placeholder="+999999999"
             required
           />
         </div>

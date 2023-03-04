@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-
+import "./Login.css"
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
-
+import "./auth";
 const Login = () => {
   const { toast } = useContext(ToastContext);
   const { loginUser } = useContext(AuthContext);
@@ -32,9 +32,15 @@ const Login = () => {
 
   return (
     <>
-      <h3>Login</h3>
+      {/* <h3 >Login</h3> */}
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="login-form" class="login-page">
+       <div class="form-box">
+       <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" onclick='login()' class="toggle-btn">Log In</button>
+        <Link to="/register"> <button type="button" onclick='register()' class="toggle-btn">Register</button></Link>
+      </div>
         <div className="form-group">
           <label htmlFor="emailInput" className="form-label mt-4">
             Email address
@@ -66,10 +72,11 @@ const Login = () => {
             required
           />
         </div>
-        <input type="submit" value="Login" className="btn btn-primary my-3" />
+        <input type="submit" value="Login" class="submit-btn" />
         <p>
           Don't have an account ? <Link to="/register">Create One</Link>
         </p>
+        </div>
       </form>
     </>
   );

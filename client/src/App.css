@@ -1,0 +1,75 @@
+.cursor {
+    z-index: 200000;
+    background: #2696e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    
+    box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    pointer-events: none;
+  }
+  .cursor::before {
+    content: "";
+    position: absolute;
+    background: #2696e8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+  }
+/* .main-cont {
+  min-height: calc(100vh - 4.5rem);
+  width: 100vw;
+  overflow: hidden;
+  box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8; */
+  /* animation: colors 15s infinite; */
+   /* } */
+
+/* ===== Scrollbar ===== */
+ /* Firefox */
+
+@keyframes colors {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+  
+  /* ===== Scrollbar ===== */
+   /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #a7ece6 #ffffff;
+  }
+  
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #a7ece6;
+    border-radius: 5px;
+    border: 3px solid #ffffff;
+  }
+  @keyframes colors {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+}
+  

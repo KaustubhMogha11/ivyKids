@@ -1,6 +1,7 @@
 body
 {
   background-color: #fab1a0;
+  /* animation: colors 5s infinite; */
 }
 /*for login and register*/
 #login-form
@@ -56,6 +57,7 @@ body
     background: #F3C693;
     border-radius: 30px;
     transition: .5s;
+    animation: colors 5s infinite;
 }
 .input-group-login
 {
@@ -92,6 +94,7 @@ body
     background:#F3C693;
     border: 0;
     outline: none;
+    animation: colors 5s infinite;
     border-radius: 30px;
 }
 .check-box
@@ -123,3 +126,12 @@ span
     color: black;
     font-size: 15;
 }
+@keyframes colors {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+}
+  
